@@ -1,0 +1,13 @@
+node_modules/
+.wrangler/
+dist/
+.dev.vars
+.env
+*.key
+*.pem
+*.log
+.DS_Store
+
+# Google 官方的 Apps Script 產品標誌，僅供本機參考用，不納入版控。
+# 本專案的 logo 已改為原創設計（assets/logo.svg），避免第三方商標問題。
+Google_Apps_Script.svg

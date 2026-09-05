@@ -1,0 +1,29 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "gas-mcp",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-08-01",
+	"compatibility_flags": [
+		"nodejs_compat",
+		"global_fetch_strictly_public"
+	],
+	"observability": {
+		"enabled": true
+	},
+	// namespace 以 GAS_ 前綴命名，避免與同帳號下 Classroom MCP 的 OAUTH_KV / CONFIG_KV 撞名
+	//（兩者的設定都存在名為 config 的 key，共用會互相覆蓋）。
+	// binding 名稱維持 OAUTH_KV：workers-oauth-provider 認這個名字。
+	// 重新部署到別的帳號時，請自行執行：
+	//   wrangler kv namespace create GAS_OAUTH_KV
+	//   wrangler kv namespace create GAS_CONFIG_KV
+	"kv_namespaces": [
+		{
+			"binding": "OAUTH_KV",
+			"id": "a99186bbc0314f53aed16a99ebbbd319"
+		},
+		{
+			"binding": "CONFIG_KV",
+			"id": "2e3449a5560a4a339cae08b638c062bb"
+		}
+	]
+}
