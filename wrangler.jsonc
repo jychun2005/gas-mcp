@@ -19,11 +19,11 @@
 	"kv_namespaces": [
 		{
 			"binding": "OAUTH_KV",
-			"id": "a99186bbc0314f53aed16a99ebbbd319"
+			"id": "b9f2dc0fd4094c2cbaa05a90c9707eb7"
 		},
 		{
 			"binding": "CONFIG_KV",
-			"id": "2e3449a5560a4a339cae08b638c062bb"
+			"id": "8d40960d589e489b98d39cb5af313973"
 		}
 	]
 }
